@@ -149,10 +149,39 @@ const onlyLetters = (str1) => {
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+const isThisAnEmail = (str1) => {
+  let copyOfStr = str1;
+  if (copyOfStr.includes("@") && copyOfStr.includes(".")) {
+    return true;
+  } else {
+    return "invalid E-mail";
+  }
+};
+
+//console.log(isThisAnEmail("kadezomail.com"));
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
+//not functioning, to be written properly
+const whatDayIsIt = (day6) => {
+  let today = day6;
+  let daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  for (let i = 0; i < daysOfTheWeek.length; i++) {
+    let day = daysOfTheWeek;
+
+    if (day[i] !== today) {
+      return day[i];
+    } else {
+      return "It is a sunny day regardless";
+    }
+  }
+};
+
+//console.log("thursday");
+
+//cannot understand this part
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -166,13 +195,42 @@ const onlyLetters = (str1) => {
   }
 */
 
+/* const rollTheDices = num => {
+
+} */
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+const howManyDays = (num) => {
+  let daysInAMonth = num;
+  let daysInAWeek = 7;
+
+  if (daysInAMonth) {
+    return daysInAMonth - daysInAWeek + "" + " days since you last met";
+  } else {
+    return "confirm days";
+  }
+};
+
+//console.log(howManyDays(31));
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+const isTodayMyBirthday = () => {
+  let daysInAMonth = Math.floor(Math.random() * 32) + 1;
+
+  if (daysInAMonth !== 12) {
+    return "Today" + " " + daysInAMonth + " " + " is" + " " + false;
+  } else {
+    return "Today" + "" + daysInAMonth + "is my birthday";
+  }
+};
+
+//console.log(isTodayMyBirthday());
 
 // Arrays & Oggetti
 
