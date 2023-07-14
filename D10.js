@@ -78,26 +78,72 @@ meModified.skills.pop("empathy");
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+const dice = () => {
+  let random = Math.floor(Math.random() * 7) + 1;
+  return random;
+};
+
+//console.log(dice());
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
+const whoIsBigger = (num1, num2) => {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+
+//console.log(whoIsBigger(25, 50));
+//console.log(whoIsBigger(2, 27));
+//console.log(whoIsBigger(50, 56));
+
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
-  Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
+  Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"] 
 */
+
+const splitMe = (str) => {
+  let singleWords = str.split(" ");
+  return singleWords;
+};
+
+//console.log(splitMe("I love coding"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-/* ESERCIZIO 5
-  Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
+const deleteOne = (str1, str2) => {
+  let strToModify = str1;
+  let stringToModify2 = str2;
 
+  if (strToModify === true) {
+    return stringToModify2.split("Talk");
+  } else {
+    return stringToModify2.split("NBA");
+  }
+};
+
+//console.log(deleteOne(true, "Talk NBA"));
+
+/* ESERCIZIO 5
+  Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche. 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+
+const onlyLetters = (str1) => {
+  let eliminateNums = str1.split(/[0-9]/).join("");
+  let result = eliminateNums;
+  return result;
+};
+
+//console.log(onlyLetters("I have 4 dogs"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
