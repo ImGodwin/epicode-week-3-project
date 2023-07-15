@@ -181,8 +181,8 @@ const whatDayIsIt = (day6) => {
 
 //console.log("thursday");
 
-//cannot understand this part
-/* ESERCIZIO 8
+//still figuring this out
+/*   ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
   il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
@@ -192,12 +192,24 @@ const whatDayIsIt = (day6) => {
   rollTheDices(3) => ritorna {
       sum: 10
       values: [3, 3, 4]
-  }
-*/
+  } */
 
-/* const rollTheDices = num => {
+/*let obj = {
+  sum: 0,
+  value: [],
+};
 
-} */
+for (let i = 1; i < 4; i++) {
+  let objToFill = obj;
+  objToFill["sum"] = i; //this will be * 3
+  console.log(objToFill);
+}
+
+ //console.log(obj);
+const rollTheDices = (num) => {
+  //the sum value in the object will be the total of dice function called 3 times and each result will be saved in an array
+  //the dice function will be posted into an array the amount of times called
+}; */
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -372,9 +384,9 @@ const newestMovie = () => {
   let max = movies[0];
   for (let i = 0; i < movies.length; i++) {
     const currentMovie = movies[i];
-    console.log(max.Year, currentMovie.Year);
+    //console.log(max.Year, currentMovie.Year);
     if (parseInt(currentMovie.Year) > parseInt(max.Year)) {
-      console.log("we found a new max value");
+      //console.log("we found a new max value");
       max = currentMovie;
     }
   }
@@ -382,7 +394,7 @@ const newestMovie = () => {
 };
 
 const theMostRecentMovie = newestMovie();
-console.log(theMostRecentMovie);
+//console.log(theMostRecentMovie);
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
@@ -396,19 +408,38 @@ const countMovies = () => {
   }
 }; */
 
-movies.forEach((movie) => {
+/* movies.forEach((movie) => {
   for (let i in movies) {
     //console.log(movies[i].Title);
   }
-});
+}); */
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 
+//first loop through the array
+//secondly pick out the movies keys
+//return its values
+
+const onlyTheYears = () => {
+  let releaseYear = [];
+
+  for (let i = 0; i < movies.length; i++) {
+    let production = movies[i].Year;
+    releaseYear.push(production);
+    //console.log(releaseYear);
+  }
+  return releaseYear;
+};
+
+//console.log(onlyTheYears());
+
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+
+const onlyInLastMillennium = () => {};
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
