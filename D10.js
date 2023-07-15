@@ -507,9 +507,20 @@ const searchByTitle = (str) => {
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+const containerSelector = () => {
+  //const newDiv = document.createElement("div");
+  //newDiv.setAttribute("id", "container");
+  const container = document.getElementById("container");
+  return container;
+};
+
+console.log(containerSelector());
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+const tdSelector = () => {};
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
