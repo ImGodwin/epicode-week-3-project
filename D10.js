@@ -526,13 +526,32 @@ const tdSelector = () => {};
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+//incomplete
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+//const links = document.getElementsByTagName("a").forEach((e) => (e.style.backgrounColor = "red"));
+//console.log(links);
+
+//const linksColorRed = () => {};
+//linksColorRed();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+const addingLiToUl = () => {
+  let ul = document.getElementById("myList");
+
+  const li = document.createElement("li");
+  li.innerText = "It is a sunny day";
+
+  ul.appendChild(li);
+  //console.log(ul);
+};
+
+addingLiToUl();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -603,7 +622,7 @@ const tree = (num) => {
   for (let i = 0; i < num; i++) {
     star = star.padStart(i + (i + 1), "*");
     //star = star.concat(" ");
-    console.log(star);
+    //console.log(star);
   }
 };
 
