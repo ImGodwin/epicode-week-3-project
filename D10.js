@@ -566,7 +566,7 @@ const removeUlChild = () => {
   ul.removeChild(li);
   //now remove the li content from with
 
-  console.log(ul);
+  //console.log(ul);
 };
 
 removeUlChild();
@@ -645,5 +645,22 @@ tree(7);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const isItPrime = (num) => {
+  //firstly, a prime number is any num that can be divided by itself and one
+  if (n < 2) {
+    return `${n} is not a prime num`;
+  }
+
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return `${n} is not a prime num`;
+    } else {
+      return `${n} is a prime num`;
+    }
+  }
+};
+
+console.log(isItPrime(12));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
