@@ -514,7 +514,7 @@ const containerSelector = () => {
   return container;
 };
 
-console.log(containerSelector());
+//console.log(containerSelector());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -556,6 +556,36 @@ const tdSelector = () => {};
 
 */
 
+const halfTree = (num) => {
+  let star = "";
+  for (let i = 1; i <= num; i++) {
+    star = star.concat("*");
+    //console.log(star);
+  }
+};
+
+halfTree(7);
+
+/*let pound = 0;
+const halfTree = (num) => {
+  let printStar = num;
+   let stars = 8;
+  for (let i = 0; i <= stars; i++) {
+    pound += stars[i];
+    console.log(pound);
+  } */
+
+//trying the while loop
+
+/*   while (pound.length <= printStar) {
+    console.log(pound);
+    pound += "*"; // <-- this is the last statement executed, so it is returned
+    console.log(pound);
+  }
+};
+
+halfTree(5); */
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -567,6 +597,17 @@ const tdSelector = () => {};
   *****
 
 */
+
+const tree = (num) => {
+  let star = "";
+  for (let i = 0; i < num; i++) {
+    star = star.padStart(i + (i + 1), "*");
+    //star = star.concat(" ");
+    console.log(star);
+  }
+};
+
+tree(7);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
