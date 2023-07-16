@@ -531,11 +531,11 @@ const tdSelector = () => {};
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-//const links = document.getElementsByTagName("a").forEach((e) => (e.style.backgrounColor = "red"));
+const links = document.getElementsByTagName("a");
 //console.log(links);
 
-//const linksColorRed = () => {};
-//linksColorRed();
+const linksColorRed = () => {};
+linksColorRed();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
@@ -547,7 +547,7 @@ const addingLiToUl = () => {
   const li = document.createElement("li");
   li.innerText = "It is a sunny day";
 
-  ul.appendChild(li);
+  // ul.appendChild(li);
   //console.log(ul);
 };
 
@@ -556,6 +556,20 @@ addingLiToUl();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+
+const removeUlChild = () => {
+  let ul = document.getElementById("myList");
+  let li = document.createElement("li");
+
+  li.innerText = "check file";
+  ul.appendChild(li);
+  ul.removeChild(li);
+  //now remove the li content from with
+
+  console.log(ul);
+};
+
+removeUlChild();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
